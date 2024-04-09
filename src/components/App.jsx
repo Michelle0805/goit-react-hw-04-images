@@ -36,7 +36,7 @@ const App = () => {
     };
 
     fetchImages();
-  }, [searchQuery, currentPage]);
+  }, [searchQuery, currentPage, images.length]);
 
   const handleSearchSubmit = query => {
     const normalizedQuery = query.trim().toLowerCase();
