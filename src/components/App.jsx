@@ -34,9 +34,10 @@ const App = () => {
         alert(`An error occurred while fetching data: ${error}`);
       }
     };
-
+    
     fetchImages();
-  }, [searchQuery, currentPage, images.length]);
+  }, [searchQuery, currentPage]);
+ 
 
   const handleSearchSubmit = query => {
     const normalizedQuery = query.trim().toLowerCase();
