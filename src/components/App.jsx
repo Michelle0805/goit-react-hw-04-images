@@ -30,6 +30,11 @@ const App = () => {
         // setIsEnd(images.length + hits.length >= totalHits);
         setIsEnd(currentPage * 12 >= totalHits);
 
+        if (hits.length === 0) {
+          alert('No images found. Try a different search.');
+          return;
+        }
+
       } catch (error) {
         setIsLoading(false);
         setIsError(true);
